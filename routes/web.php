@@ -18,3 +18,19 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/lastyear', function () {
+    return view('lastyear');
+});
+
+Route::get('/add', function () {
+    return view('add');
+});
+
+Route::get('/list', function () {
+    return view('list');
+});
+
+Route::get('/categories', function () {
+    return view('categories');
+});
