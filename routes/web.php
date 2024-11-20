@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ExpenseController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,9 +28,8 @@ Route::get('/add', function () {
     return view('add');
 });
 
-Route::get('/list', function () {
-    return view('list');
-});
+Route::get('/list', [ExpenseController::class, 'list'])->name('expenses.list');
+
 
 Route::get('/categories', function () {
     return view('categories');
