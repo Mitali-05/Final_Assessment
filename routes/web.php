@@ -30,7 +30,4 @@ Route::get('/add', function () {
 
 Route::get('/list', [ExpenseController::class, 'list'])->name('expenses.list');
 
-
-Route::get('/categories', function () {
-    return view('categories');
-});
+Route::get('/categories', [ExpenseController::class, 'categories'])->name('expenses.categories');

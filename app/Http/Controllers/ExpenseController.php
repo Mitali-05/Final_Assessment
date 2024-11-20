@@ -22,10 +22,15 @@ class ExpenseController extends Controller
             'expenses' => $expenses
         ]);
     }
+
+    public function categories()
+    {
+        $expenses = DB::table('expenses')->get()->groupBy('category');
+
+        return view('expenses.categories', [
+            'expenses' => $expenses
+        ]);
+
+    }
+
 }
-
-
-    //    ->where(column:'id', operator: '=', value:1)
-    // $todos = Todo::whereDate('due_date', '>', now())
-    //    ->where('description', 'like', '%third%')
-    //    ->get();
