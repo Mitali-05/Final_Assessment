@@ -20,9 +20,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/lastyear', function () {
-    return view('lastyear');
-});
+Route::get('/last12months', [ExpenseController::class, 'last12months'])->name('expenses.last12months');
 
 Route::get('/add', function () {
     return view('add');

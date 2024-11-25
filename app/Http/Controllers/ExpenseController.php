@@ -33,4 +33,31 @@ class ExpenseController extends Controller
 
     }
 
+    public function last12months()
+    {
+        $startDate = date('Y-m-01', strtotime('-11 months'));
+        $endDate = date('Y-m-t');
+
+        $expenses = Expense::whereBetween('date', [$startDate, $endDate])
+            ->orderBy('date', 'desc')
+            ->get()
+            ->groupBy(function ($expense) {
+                return date('Y-m', strtotime($expense->date));
+            });
+
+        $monthlyExpenses = [];
+        foreach ($expenses as $month => $monthExpenses) {
+            $monthlyExpenses[] = (object) [
+                'month' => date('F Y', strtotime($month . '-01')),
+                'total' => $monthExpenses->sum('amount'),
+                'expenses' => $monthExpenses,
+            ];
+        }
+
+        return view('expenses.last12months', [
+            'expenses' => $monthlyExpenses
+        ]);
+
+    }
+
 }
