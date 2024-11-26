@@ -1,14 +1,14 @@
 <x-app-layout>   
     <div style="width:auto; height:auto;"> 
-        <div class="bg-white overflow-hidden " style="height:670px; background:linear-gradient(to top,#2584a4,#68b6cf)">
+        <div class="bg-white overflow-hidden " style="background-image:url('img4.png'); background-repeat:no-repeat; background-size:cover; background-position:right; height:670px;">
             <p style="font-size:5rem; color:#168118; margin-left:30px; margin-top:10px;">
                 <strong>Expense Tracker</strong>
             </p>
             <p style="font-family:cursive; font-size:2rem; margin-left:145px; color:rgba(240, 248, 255, 0.886); margin-top:-25px;">
                 Keep a track on your daily outlay!!!
             </p>
-            <div style="margin-left:50px; margin-top:45px;">
-                <p style="font-size: 2.5rem; font-family:'monospace'">How It Works?</p>
+            <div style="margin-left:50px;color:white; margin-top:45px;">
+                <p style="font-size: 2.5rem;font-family:'monospace'">How It Works?</p>
                 <div style="width:1000px; padding: 10px; margin-top:-15px">
                     <p style="font-size: 25px; font-family:'Arial Narrow'">List Expense</p>
                     <p>Schedule future payments and set dates for recurring expenses.</p>
