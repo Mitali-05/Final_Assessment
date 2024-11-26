@@ -22,9 +22,7 @@ require __DIR__.'/auth.php';
 
 Route::get('/last12months', [ExpenseController::class, 'last12months'])->name('expenses.last12months');
 
-Route::get('/add', function () {
-    return view('add');
-});
+Route::get('/add', [ExpenseController::class, 'add'])->name('expenses.add');
 
 Route::get('/list', [ExpenseController::class, 'list'])->name('expenses.list');
 

@@ -1,3 +1,12 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expense Tracker</title>
+    <link
+        rel="stylesheet"
+        href="/pico.min.css"
+    />
+</head>
 <x-app-layout>
     <x-slot name="header">
         <h4 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -5,11 +14,11 @@
         </h4>
     </x-slot>
 
-    <main class="container">
+    <main class="container" style="margin-top:35px">
             @foreach ($expenses as $monthD)
                 <div style="display: flex; justify-content: space-between;">
                     <strong><h3 style="margin: 0;">{{ $monthD->month }}</h3></strong>
-                    <strong style="margin: 0;">Total Expense: ₹{{ number_format($monthD->total, 2) }}</strong>
+                    <strong style="margin: 0;">Total Expense: ₹{{ $monthD->total }}</strong>
                 </div>
                 <p>
                     <table>
@@ -24,7 +33,7 @@
                         @foreach ($monthD->expenses as $expense)
                         <tr>
                             <td>{{ $expense->id }}</td>
-                            <td>₹{{ number_format($expense->amount, 2) }}</td>
+                            <td>₹{{$expense->amount}}</td>
                             <td>{{ $expense->category}}</td>
                             <td>
                                 @if($expense->note)

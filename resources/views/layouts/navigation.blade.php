@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-black border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -15,6 +15,28 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <!-- List Expense -->
+                    <x-nav-link :href="route('expenses.list')" :active="request()->routeIs('expenses.list')">
+                        {{ __('List Expense') }}
+                    </x-nav-link>
+
+                    
+                    <!-- Add Expense -->
+                    <x-nav-link :href="route('expenses.add')" :active="request()->routeIs('expenses.add')">
+                        {{ __('Add Expense') }}
+                    </x-nav-link>
+
+                    <!-- Category Wise -->
+                    <x-nav-link :href="route('expenses.categories')" :active="request()->routeIs('expenses.categories')">
+                        {{ __('Category Wise') }}
+                    </x-nav-link>
+
+                    <!-- Last 12 Months -->
+                    <x-nav-link :href="route('expenses.last12months')" :active="request()->routeIs('expenses.last12months')">
+                        {{ __('Last 12 Months') }}
+                    </x-nav-link> 
+
                 </div>
             </div>
 
@@ -70,6 +92,27 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
+            <!-- List Expense -->
+            <x-responsive-nav-link :href="route('expenses.list')" :active="request()->routeIs('expenses.list')">
+                {{ __('List Expense') }}
+            </x-responsive-nav-link>
+        
+            <!-- Add Expense -->
+            <x-responsive-nav-link :href="route('expenses.add')" :active="request()->routeIs('expenses.add')">
+                {{ __('Add Expense') }}
+            </x-responsive-nav-link>
+
+            <!-- Category Wise -->
+            <x-responsive-nav-link :href="route('expenses.categories')" :active="request()->routeIs('expenses.categories')">
+                {{ __('Category Wise') }}
+            </x-responsive-nav-link>
+
+            <!-- Last 12 Months -->
+            <x-responsive-nav-link :href="route('expenses.last12months')" :active="request()->routeIs('expenses.last12months')">
+                {{ __('Last 12 Months') }}
+            </x-responsive-nav-link>
+
         </div>
 
         <!-- Responsive Settings Options -->

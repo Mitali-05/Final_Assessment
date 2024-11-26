@@ -16,7 +16,6 @@ class ExpenseController extends Controller
     public function list()
     {
         $expenses = DB::table('expenses')->get();
-        // $expenses = DB::table('expenses')->ddRawSql();
 
         return view('expenses.list', [
             'expenses' => $expenses
