@@ -15,14 +15,14 @@
     </x-slot>
 
     <main class="container" style="margin-top:35px">
-        <table>
-            <tr>
-                <th>#</th>
-                <th>Amount</th>
-                <th>Category</th>
-                <th>Note</th>
-                <th>Date</th>
-            </tr>
+            <table>
+                <tr>
+                    <th style="font-weight: bold;">#</th>
+                    <th style="font-weight: bold;">Amount</th>
+                    <th style="font-weight: bold;">Category</th>
+                    <th style="font-weight: bold;">Note</th>
+                    <th style="font-weight: bold;">Date</th>
+                </tr>
         
             @foreach ($expenses as $i=>$expense)
             <tr>

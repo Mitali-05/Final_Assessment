@@ -49,7 +49,7 @@
                         </table>
                     </p>
                 </details>
-                <hr>
+                <hr><br>
             @endforeach
     </main>
     

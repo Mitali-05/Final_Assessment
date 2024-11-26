@@ -23,11 +23,11 @@
                 <p>
                     <table>
                         <tr>
-                            <th>#</th>
-                            <th>Amount</th>
-                            <th>Category</th>
-                            <th>Note</th>
-                            <th>Date</th>
+                            <th style="font-weight: bold;">#</th>
+                            <th style="font-weight: bold;">Amount</th>
+                            <th style="font-weight: bold;">Category</th>
+                            <th style="font-weight: bold;">Note</th>
+                            <th style="font-weight: bold;">Date</th>
                         </tr>
                         
                         @foreach ($monthD->expenses as $expense)

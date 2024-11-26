@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('expenses', function (Blueprint $table) {
             $table->id();
-            $table->int('amount');
+            $table->float('amount');
             $table->text('category');
             $table->text('note')->nullable();
             $table->date('date');

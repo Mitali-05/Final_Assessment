@@ -23,6 +23,7 @@ require __DIR__.'/auth.php';
 Route::get('/last12months', [ExpenseController::class, 'last12months'])->name('expenses.last12months');
 
 Route::get('/add', [ExpenseController::class, 'add'])->name('expenses.add');
+Route::post('/add', [ExpenseController::class, 'store'])->name('expenses.store');
 
 Route::get('/list', [ExpenseController::class, 'list'])->name('expenses.list');
 

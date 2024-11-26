@@ -12,6 +12,28 @@ class ExpenseController extends Controller
        //
     }
     
+    public function add(){
+        return view('expenses.add');
+    }
+    public function store(Request $request)
+    {
+        
+        $validatedData = $request->validate([
+            'amount' => 'required|numeric',
+            'category' => 'required|string',
+            'date' => 'required|date',
+            'note' => 'nullable|string',
+        ]);
+
+        Expense::create([
+            'amount' => $validatedData['amount'],
+            'category' => $validatedData['category'],
+            'date' => $validatedData['date'],
+            'note' => $validatedData['note'] ?? '',
+        ]);
+
+        return redirect()->route('expenses.list'); 
+    }
     
     public function list()
     {
